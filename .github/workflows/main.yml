@@ -12,3 +12,5 @@ jobs:
         uses: actions/checkout@v4
       - name: check
         uses: metlos/toolchain-cicd/gomod-check@improve-gomod-check
+        with:
+          protected-modules: ""
