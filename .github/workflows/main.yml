@@ -1,0 +1,14 @@
+name: gomod check
+on:
+  push:
+    branches:
+      - main
+jobs:
+  gomodreplacements:
+    name: go.mod replacements
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: check
+        uses: metlos/toolchain-cicd/gomod-check@improve-gomod-check
